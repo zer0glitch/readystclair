@@ -1,0 +1,192 @@
+Fields
+ id
+ group_key
+ field_name
+ default_value
+ field_type
+
+sql_stmt = "insert into fields (group_key, field_name, default_value, field_type) values (1, 'Name', '', 1);";
+if (sqlite3_exec(bereadyDB, sql_stmt, NULL, NULL, &errMsg) != SQLITE_OK) NSLog( @"Failed to create table");
+sql_stmt = "insert into fields (group_key, field_name, default_value, field_type) values (1, 'Age', '', 1);";
+if (sqlite3_exec(bereadyDB, sql_stmt, NULL, NULL, &errMsg) != SQLITE_OK) NSLog( @"Failed to create table");
+sql_stmt = "insert into fields (group_key, field_name, default_value, field_type) values (1, 'Primary Phone', '',1);";
+if (sqlite3_exec(bereadyDB, sql_stmt, NULL, NULL, &errMsg) != SQLITE_OK) NSLog( @"Failed to create table");
+sql_stmt = "insert into fields (group_key, field_name, default_value, field_type) values (1, 'Secondary Phone', '',1);";
+if (sqlite3_exec(bereadyDB, sql_stmt, NULL, NULL, &errMsg) != SQLITE_OK) NSLog( @"Failed to create table");
+sql_stmt = "insert into fields (group_key, field_name, default_value, field_type) values (1, 'Email', '',1);";
+if (sqlite3_exec(bereadyDB, sql_stmt, NULL, NULL, &errMsg) != SQLITE_OK) NSLog( @"Failed to create table");
+sql_stmt = "insert into fields (group_key, field_name, default_value, field_type) values (1, 'Address', '',2);";
+if (sqlite3_exec(bereadyDB, sql_stmt, NULL, NULL, &errMsg) != SQLITE_OK) NSLog( @"Failed to create table");
+sql_stmt = "insert into fields (group_key, field_name, default_value, field_type) values (1, 'City', '',1);";
+if (sqlite3_exec(bereadyDB, sql_stmt, NULL, NULL, &errMsg) != SQLITE_OK) NSLog( @"Failed to create table");
+sql_stmt = "insert into fields (group_key, field_name, default_value, field_type) values (1, 'State', '',1);";
+if (sqlite3_exec(bereadyDB, sql_stmt, NULL, NULL, &errMsg) != SQLITE_OK) NSLog( @"Failed to create table");
+sql_stmt = "insert into fields (group_key, field_name, default_value, field_type) values (1, 'Zip', '',1);";
+if (sqlite3_exec(bereadyDB, sql_stmt, NULL, NULL, &errMsg) != SQLITE_OK) NSLog( @"Failed to create table");
+sql_stmt = "insert into fields (group_key, field_name, default_value, field_type) values (1, 'Physician Name', '',1);";
+if (sqlite3_exec(bereadyDB, sql_stmt, NULL, NULL, &errMsg) != SQLITE_OK) NSLog( @"Failed to create table");
+sql_stmt = "insert into fields (group_key, field_name, default_value, field_type) values (1, 'Physician Phone', '',1);";
+if (sqlite3_exec(bereadyDB, sql_stmt, NULL, NULL, &errMsg) != SQLITE_OK) NSLog( @"Failed to create table");
+sql_stmt = "insert into fields (group_key, field_name, default_value, field_type) values (1, 'Medications', '',2);";
+if (sqlite3_exec(bereadyDB, sql_stmt, NULL, NULL, &errMsg) != SQLITE_OK) NSLog( @"Failed to create table");
+sql_stmt = "insert into fields (group_key, field_name, default_value, field_type) values (1, 'Notes', '',2);";
+if (sqlite3_exec(bereadyDB, sql_stmt, NULL, NULL, &errMsg) != SQLITE_OK) NSLog( @"Failed to create table");
+
+sql_stmt = "insert into fields (group_key, field_name, default_value, field_type) values (2, 'Name', '',1);";
+if (sqlite3_exec(bereadyDB, sql_stmt, NULL, NULL, &errMsg) != SQLITE_OK) NSLog( @"Failed to create table");
+sql_stmt = "insert into fields (group_key, field_name, default_value, field_type) values (2, 'Age', '',1);";
+if (sqlite3_exec(bereadyDB, sql_stmt, NULL, NULL, &errMsg) != SQLITE_OK) NSLog( @"Failed to create table");
+sql_stmt = "insert into fields (group_key, field_name, default_value, field_type) values (2, 'Relationship', '',1);";
+if (sqlite3_exec(bereadyDB, sql_stmt, NULL, NULL, &errMsg) != SQLITE_OK) NSLog( @"Failed to create table");
+sql_stmt = "insert into fields (group_key, field_name, default_value, field_type) values (2, 'Primary Phone', '',1);";
+if (sqlite3_exec(bereadyDB, sql_stmt, NULL, NULL, &errMsg) != SQLITE_OK) NSLog( @"Failed to create table");
+sql_stmt = "insert into fields (group_key, field_name, default_value, field_type) values (2, 'Secondary Phone', '',1);";
+if (sqlite3_exec(bereadyDB, sql_stmt, NULL, NULL, &errMsg) != SQLITE_OK) NSLog( @"Failed to create table");
+sql_stmt = "insert into fields (group_key, field_name, default_value, field_type) values (2, 'Email', '',1);";
+if (sqlite3_exec(bereadyDB, sql_stmt, NULL, NULL, &errMsg) != SQLITE_OK) NSLog( @"Failed to create table");
+sql_stmt = "insert into fields (group_key, field_name, default_value, field_type) values (2, 'Address', '',2);";
+if (sqlite3_exec(bereadyDB, sql_stmt, NULL, NULL, &errMsg) != SQLITE_OK) NSLog( @"Failed to create table");
+sql_stmt = "insert into fields (group_key, field_name, default_value, field_type) values (2, 'City', '',1);";
+if (sqlite3_exec(bereadyDB, sql_stmt, NULL, NULL, &errMsg) != SQLITE_OK) NSLog( @"Failed to create table");
+sql_stmt = "insert into fields (group_key, field_name, default_value, field_type) values (2, 'State', '',1);";
+if (sqlite3_exec(bereadyDB, sql_stmt, NULL, NULL, &errMsg) != SQLITE_OK) NSLog( @"Failed to create table");
+sql_stmt = "insert into fields (group_key, field_name, default_value, field_type) values (2, 'Zip', '',1);";
+if (sqlite3_exec(bereadyDB, sql_stmt, NULL, NULL, &errMsg) != SQLITE_OK) NSLog( @"Failed to create table");
+sql_stmt = "insert into fields (group_key, field_name, default_value, field_type) values (2, 'Physician Name', '',1);";
+if (sqlite3_exec(bereadyDB, sql_stmt, NULL, NULL, &errMsg) != SQLITE_OK) NSLog( @"Failed to create table");
+sql_stmt = "insert into fields (group_key, field_name, default_value, field_type) values (2, 'Physician Phone', '',1);";
+if (sqlite3_exec(bereadyDB, sql_stmt, NULL, NULL, &errMsg) != SQLITE_OK) NSLog( @"Failed to create table");
+sql_stmt = "insert into fields (group_key, field_name, default_value, field_type) values (2, 'Medications', '',2);";
+if (sqlite3_exec(bereadyDB, sql_stmt, NULL, NULL, &errMsg) != SQLITE_OK) NSLog( @"Failed to create table");
+sql_stmt = "insert into fields (group_key, field_name, default_value, field_type) values (2, 'Notes', '',2);";
+if (sqlite3_exec(bereadyDB, sql_stmt, NULL, NULL, &errMsg) != SQLITE_OK) NSLog( @"Failed to create table");
+
+sql_stmt = "insert into fields (group_key, field_name, default_value, field_type) values (3, 'Name', '',1);";
+if (sqlite3_exec(bereadyDB, sql_stmt, NULL, NULL, &errMsg) != SQLITE_OK) NSLog( @"Failed to create table");
+sql_stmt = "insert into fields (group_key, field_name, default_value, field_type) values (3, 'Type of Animal', '',1);";
+if (sqlite3_exec(bereadyDB, sql_stmt, NULL, NULL, &errMsg) != SQLITE_OK) NSLog( @"Failed to create table");
+sql_stmt = "insert into fields (group_key, field_name, default_value, field_type) values (3, 'Breed', '',1);";
+if (sqlite3_exec(bereadyDB, sql_stmt, NULL, NULL, &errMsg) != SQLITE_OK) NSLog( @"Failed to create table");
+sql_stmt = "insert into fields (group_key, field_name, default_value, field_type) values (3, 'Veternarian Name', '',1);";
+if (sqlite3_exec(bereadyDB, sql_stmt, NULL, NULL, &errMsg) != SQLITE_OK) NSLog( @"Failed to create table");
+sql_stmt = "insert into fields (group_key, field_name, default_value, field_type) values (3, 'Veternarian Phone', '',1);";
+if (sqlite3_exec(bereadyDB, sql_stmt, NULL, NULL, &errMsg) != SQLITE_OK) NSLog( @"Failed to create table");
+sql_stmt = "insert into fields (group_key, field_name, default_value, field_type) values (3, 'Medicates', '',1);";
+if (sqlite3_exec(bereadyDB, sql_stmt, NULL, NULL, &errMsg) != SQLITE_OK) NSLog( @"Failed to create table");
+sql_stmt = "insert into fields (group_key, field_name, default_value, field_type) values (3, 'Vaccinations', '',1);";
+if (sqlite3_exec(bereadyDB, sql_stmt, NULL, NULL, &errMsg) != SQLITE_OK) NSLog( @"Failed to create table");
+sql_stmt = "insert into fields (group_key, field_name, default_value, field_type) values (3, 'Notes', '',1);";
+if (sqlite3_exec(bereadyDB, sql_stmt, NULL, NULL, &errMsg) != SQLITE_OK) NSLog( @"Failed to create table");
+
+sql_stmt = "insert into fields (group_key, field_name, default_value, field_type) values (4, 'Name', '',1);";
+if (sqlite3_exec(bereadyDB, sql_stmt, NULL, NULL, &errMsg) != SQLITE_OK) NSLog( @"Failed to create table");
+sql_stmt = "insert into fields (group_key, field_name, default_value, field_type) values (4, 'Age', '',1);";
+if (sqlite3_exec(bereadyDB, sql_stmt, NULL, NULL, &errMsg) != SQLITE_OK) NSLog( @"Failed to create table");
+sql_stmt = "insert into fields (group_key, field_name, default_value, field_type) values (4, 'Relationship', '',1);";
+if (sqlite3_exec(bereadyDB, sql_stmt, NULL, NULL, &errMsg) != SQLITE_OK) NSLog( @"Failed to create table");
+sql_stmt = "insert into fields (group_key, field_name, default_value, field_type) values (4, 'Primary Phone', '',1);";
+if (sqlite3_exec(bereadyDB, sql_stmt, NULL, NULL, &errMsg) != SQLITE_OK) NSLog( @"Failed to create table");
+sql_stmt = "insert into fields (group_key, field_name, default_value, field_type) values (4, 'Secondary Phone', '',1);";
+if (sqlite3_exec(bereadyDB, sql_stmt, NULL, NULL, &errMsg) != SQLITE_OK) NSLog( @"Failed to create table");
+sql_stmt = "insert into fields (group_key, field_name, default_value, field_type) values (4, 'Email', '',1);";
+if (sqlite3_exec(bereadyDB, sql_stmt, NULL, NULL, &errMsg) != SQLITE_OK) NSLog( @"Failed to create table");
+sql_stmt = "insert into fields (group_key, field_name, default_value, field_type) values (4, 'Address', '',2);";
+if (sqlite3_exec(bereadyDB, sql_stmt, NULL, NULL, &errMsg) != SQLITE_OK) NSLog( @"Failed to create table");
+sql_stmt = "insert into fields (group_key, field_name, default_value, field_type) values (4, 'City', '',1);";
+if (sqlite3_exec(bereadyDB, sql_stmt, NULL, NULL, &errMsg) != SQLITE_OK) NSLog( @"Failed to create table");
+sql_stmt = "insert into fields (group_key, field_name, default_value, field_type) values (4, 'State', '',1);";
+if (sqlite3_exec(bereadyDB, sql_stmt, NULL, NULL, &errMsg) != SQLITE_OK) NSLog( @"Failed to create table");
+sql_stmt = "insert into fields (group_key, field_name, default_value, field_type) values (4, 'Zip', '',1);";
+if (sqlite3_exec(bereadyDB, sql_stmt, NULL, NULL, &errMsg) != SQLITE_OK) NSLog( @"Failed to create table");
+sql_stmt = "insert into fields (group_key, field_name, default_value, field_type) values (4, 'Physician Name', '',1);";
+if (sqlite3_exec(bereadyDB, sql_stmt, NULL, NULL, &errMsg) != SQLITE_OK) NSLog( @"Failed to create table");
+sql_stmt = "insert into fields (group_key, field_name, default_value, field_type) values (4, 'Physician Phone', '',1);";
+if (sqlite3_exec(bereadyDB, sql_stmt, NULL, NULL, &errMsg) != SQLITE_OK) NSLog( @"Failed to create table");
+
+sql_stmt = "insert into fields (group_key, field_name, default_value, field_type) values (5, '*Employee Name', '',1);";
+if (sqlite3_exec(bereadyDB, sql_stmt, NULL, NULL, &errMsg) != SQLITE_OK) NSLog( @"Failed to create table");
+sql_stmt = "insert into fields (group_key, field_name, default_value, field_type) values (5, '*Company Name', '',1);";
+if (sqlite3_exec(bereadyDB, sql_stmt, NULL, NULL, &errMsg) != SQLITE_OK) NSLog( @"Failed to create table");
+sql_stmt = "insert into fields (group_key, field_name, default_value, field_type) values (5, 'Primary Phone', '',1);";
+if (sqlite3_exec(bereadyDB, sql_stmt, NULL, NULL, &errMsg) != SQLITE_OK) NSLog( @"Failed to create table");
+sql_stmt = "insert into fields (group_key, field_name, default_value, field_type) values (5, 'Secondary Phone', '',1);";
+if (sqlite3_exec(bereadyDB, sql_stmt, NULL, NULL, &errMsg) != SQLITE_OK) NSLog( @"Failed to create table");
+sql_stmt = "insert into fields (group_key, field_name, default_value, field_type) values (5, 'Email', '',1);";
+if (sqlite3_exec(bereadyDB, sql_stmt, NULL, NULL, &errMsg) != SQLITE_OK) NSLog( @"Failed to create table");
+sql_stmt = "insert into fields (group_key, field_name, default_value, field_type) values (5, 'Address', '',2);";
+if (sqlite3_exec(bereadyDB, sql_stmt, NULL, NULL, &errMsg) != SQLITE_OK) NSLog( @"Failed to create table");
+sql_stmt = "insert into fields (group_key, field_name, default_value, field_type) values (5, 'City', '',1);";
+if (sqlite3_exec(bereadyDB, sql_stmt, NULL, NULL, &errMsg) != SQLITE_OK) NSLog( @"Failed to create table");
+sql_stmt = "insert into fields (group_key, field_name, default_value, field_type) values (5, 'State', '',1);";
+if (sqlite3_exec(bereadyDB, sql_stmt, NULL, NULL, &errMsg) != SQLITE_OK) NSLog( @"Failed to create table");
+sql_stmt = "insert into fields (group_key, field_name, default_value, field_type) values (5, 'Zip', '',1);";
+if (sqlite3_exec(bereadyDB, sql_stmt, NULL, NULL, &errMsg) != SQLITE_OK) NSLog( @"Failed to create table");
+sql_stmt = "insert into fields (group_key, field_name, default_value, field_type) values (5, 'Notes', '',2);
+if (sqlite3_exec(bereadyDB, sql_stmt, NULL, NULL, &errMsg) != SQLITE_OK) NSLog( @"Failed to create table");
+
+sql_stmt = "insert into fields (group_key, field_name, default_value, field_type) values (6, '*Student Name', '',1);";
+if (sqlite3_exec(bereadyDB, sql_stmt, NULL, NULL, &errMsg) != SQLITE_OK) NSLog( @"Failed to create table");
+sql_stmt = "insert into fields (group_key, field_name, default_value, field_type) values (6, '*School Name', '',1);";
+if (sqlite3_exec(bereadyDB, sql_stmt, NULL, NULL, &errMsg) != SQLITE_OK) NSLog( @"Failed to create table");
+sql_stmt = "insert into fields (group_key, field_name, default_value, field_type) values (6, 'Primary Phone', '',1);";
+if (sqlite3_exec(bereadyDB, sql_stmt, NULL, NULL, &errMsg) != SQLITE_OK) NSLog( @"Failed to create table");
+sql_stmt = "insert into fields (group_key, field_name, default_value, field_type) values (6, 'Secondary Phone', '',1);";
+if (sqlite3_exec(bereadyDB, sql_stmt, NULL, NULL, &errMsg) != SQLITE_OK) NSLog( @"Failed to create table");
+sql_stmt = "insert into fields (group_key, field_name, default_value, field_type) values (6, 'Email', '',1);";
+if (sqlite3_exec(bereadyDB, sql_stmt, NULL, NULL, &errMsg) != SQLITE_OK) NSLog( @"Failed to create table");
+sql_stmt = "insert into fields (group_key, field_name, default_value, field_type) values (6, 'Address', '',2);";
+if (sqlite3_exec(bereadyDB, sql_stmt, NULL, NULL, &errMsg) != SQLITE_OK) NSLog( @"Failed to create table");
+sql_stmt = "insert into fields (group_key, field_name, default_value, field_type) values (6, 'City', '',1);";
+if (sqlite3_exec(bereadyDB, sql_stmt, NULL, NULL, &errMsg) != SQLITE_OK) NSLog( @"Failed to create table");
+sql_stmt = "insert into fields (group_key, field_name, default_value, field_type) values (6, 'State', '',1);";
+if (sqlite3_exec(bereadyDB, sql_stmt, NULL, NULL, &errMsg) != SQLITE_OK) NSLog( @"Failed to create table");
+sql_stmt = "insert into fields (group_key, field_name, default_value, field_type) values (6, 'Zip', '',1);";
+if (sqlite3_exec(bereadyDB, sql_stmt, NULL, NULL, &errMsg) != SQLITE_OK) NSLog( @"Failed to create table");
+sql_stmt = "insert into fields (group_key, field_name, default_value, field_type) values (6, 'Notes', '',2);
+if (sqlite3_exec(bereadyDB, sql_stmt, NULL, NULL, &errMsg) != SQLITE_OK) NSLog( @"Failed to create table");
+
+sql_stmt = "insert into fields (group_key, field_name, default_value, field_type) values (7, '*Name', '',1);";
+if (sqlite3_exec(bereadyDB, sql_stmt, NULL, NULL, &errMsg) != SQLITE_OK) NSLog( @"Failed to create table");
+sql_stmt = "insert into fields (group_key, field_name, default_value, field_type) values (7, 'Primary Phone', '',1);";
+if (sqlite3_exec(bereadyDB, sql_stmt, NULL, NULL, &errMsg) != SQLITE_OK) NSLog( @"Failed to create table");
+sql_stmt = "insert into fields (group_key, field_name, default_value, field_type) values (7, 'Secondary Phone', '',1);";
+if (sqlite3_exec(bereadyDB, sql_stmt, NULL, NULL, &errMsg) != SQLITE_OK) NSLog( @"Failed to create table");
+sql_stmt = "insert into fields (group_key, field_name, default_value, field_type) values (7, 'Email', '',1);";
+if (sqlite3_exec(bereadyDB, sql_stmt, NULL, NULL, &errMsg) != SQLITE_OK) NSLog( @"Failed to create table");
+sql_stmt = "insert into fields (group_key, field_name, default_value, field_type) values (7, 'Address', '',2);";
+if (sqlite3_exec(bereadyDB, sql_stmt, NULL, NULL, &errMsg) != SQLITE_OK) NSLog( @"Failed to create table");
+sql_stmt = "insert into fields (group_key, field_name, default_value, field_type) values (7, 'City', '',1);";
+if (sqlite3_exec(bereadyDB, sql_stmt, NULL, NULL, &errMsg) != SQLITE_OK) NSLog( @"Failed to create table");
+sql_stmt = "insert into fields (group_key, field_name, default_value, field_type) values (7, 'State', '',1);";
+if (sqlite3_exec(bereadyDB, sql_stmt, NULL, NULL, &errMsg) != SQLITE_OK) NSLog( @"Failed to create table");
+sql_stmt = "insert into fields (group_key, field_name, default_value, field_type) values (7, 'Zip', '',1);";
+if (sqlite3_exec(bereadyDB, sql_stmt, NULL, NULL, &errMsg) != SQLITE_OK) NSLog( @"Failed to create table");
+sql_stmt = "insert into fields (group_key, field_name, default_value, field_type) values (7, 'Notes', '',2);
+if (sqlite3_exec(bereadyDB, sql_stmt, NULL, NULL, &errMsg) != SQLITE_OK) NSLog( @"Failed to create table");
+
+sql_stmt = "insert into fields (group_key, field_name, default_value, field_type) values (8, '*Name', '',1);";
+if (sqlite3_exec(bereadyDB, sql_stmt, NULL, NULL, &errMsg) != SQLITE_OK) NSLog( @"Failed to create table");
+sql_stmt = "insert into fields (group_key, field_name, default_value, field_type) values (8, 'Primary Phone', '',1);";
+if (sqlite3_exec(bereadyDB, sql_stmt, NULL, NULL, &errMsg) != SQLITE_OK) NSLog( @"Failed to create table");
+sql_stmt = "insert into fields (group_key, field_name, default_value, field_type) values (8, 'Secondary Phone', '',1);";
+if (sqlite3_exec(bereadyDB, sql_stmt, NULL, NULL, &errMsg) != SQLITE_OK) NSLog( @"Failed to create table");
+sql_stmt = "insert into fields (group_key, field_name, default_value, field_type) values (8, 'Email', '',1);";
+if (sqlite3_exec(bereadyDB, sql_stmt, NULL, NULL, &errMsg) != SQLITE_OK) NSLog( @"Failed to create table");
+sql_stmt = "insert into fields (group_key, field_name, default_value, field_type) values (8, 'Address', '',2);";
+if (sqlite3_exec(bereadyDB, sql_stmt, NULL, NULL, &errMsg) != SQLITE_OK) NSLog( @"Failed to create table");
+sql_stmt = "insert into fields (group_key, field_name, default_value, field_type) values (8, 'City', '',1);";
+if (sqlite3_exec(bereadyDB, sql_stmt, NULL, NULL, &errMsg) != SQLITE_OK) NSLog( @"Failed to create table");
+sql_stmt = "insert into fields (group_key, field_name, default_value, field_type) values (8, 'State', '',1);";
+if (sqlite3_exec(bereadyDB, sql_stmt, NULL, NULL, &errMsg) != SQLITE_OK) NSLog( @"Failed to create table");
+sql_stmt = "insert into fields (group_key, field_name, default_value, field_type) values (8, 'Zip', '',1);";
+if (sqlite3_exec(bereadyDB, sql_stmt, NULL, NULL, &errMsg) != SQLITE_OK) NSLog( @"Failed to create table");
+sql_stmt = "insert into fields (group_key, field_name, default_value, field_type) values (8, 'Notes', '',2);
+if (sqlite3_exec(bereadyDB, sql_stmt, NULL, NULL, &errMsg) != SQLITE_OK) NSLog( @"Failed to create table");
+
+Values
+ id
+ group_key
+ data_key
+ field_type
+ field_name
+ value
