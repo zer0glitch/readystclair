@@ -7,8 +7,6 @@
 //
 
 #import "LocalViewController.h"
-#import "ASIHTTPRequest.h"
-#import "ASIFormDataRequest.h"
 #import "URLData.h"
 #import "JKMLParser.h"
 #import "LayerSelectViewController.h"
@@ -69,7 +67,15 @@
     
     // This is real, going to use test data first...
     //[self loadDataSet];
-    [self loadDisplayLayers];
+    
+    @try {
+        [self loadDisplayLayers];
+    } @catch (NSException * e) {
+            NSLog(@"Exception: %@", e);
+        }
+        @finally {
+            // Added to show finally works as well
+        }
 	
 }
 
@@ -93,19 +99,31 @@
         NSLog(@"display layer 1");
         //kmlParser = [[JKMLParser parseKMLAtURL:url imageName:@"ems.operations.lawEnforcement.policeStation.png"] retain];
         kmlParser.image = @"ems.operations.lawEnforcement.policeStation.png";
+        NSLog(@"display layer 11");
         [kmlParser parseKML];
+        NSLog(@"display layer 12");
         // Add all of the MKOverlay objects parsed from the KML file to the map.
          overlays = [kmlParser overlays];
+        NSLog(@"display layer 13");
         [map addOverlays:overlays];
+        NSLog(@"display layer 14");
         
         // Add all of the MKAnnotation objects parsed from the KML file to the map.
         NSArray *annotations = [kmlParser points];
+        NSLog(@"display layer 14");
         [map addAnnotations:annotations];
+        NSLog(@"display layer 15");
         //[kmlParser release];
     }
     
-    [url release];
+    url = [NSURL URLWithString:@"http://www.zeroglitch.org:9090/PEATrackerServer/KMZProxy?url=http://gis.stclaircounty.org/ArcGIS/rest/services/Cad/MapServer/kml/mapImage.kmz"];
+    NSData *data = [NSData dataWithContentsOfURL:url];
+    NSString *ret = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+    NSLog(@"ret=%@", ret);
+    
+    //[url release];
 
+    NSLog(@"display layer 16");
     
     if (displayLayer2) {
 
@@ -123,9 +141,9 @@
         // Add all of the MKAnnotation objects parsed from the KML file to the map.
         annotations = [kmlParser points];
         [map addAnnotations:annotations];
-        [url release];
+     //   [url release];
     }
-    
+    NSLog(@"display layer 17");
     
     if (displayLayer3) {
         // Set 3
@@ -142,9 +160,10 @@
         // Add all of the MKAnnotation objects parsed from the KML file to the map.
         annotations = [kmlParser points];
         [map addAnnotations:annotations];
-        [url release];
+       // [url release];
     }
     
+    NSLog(@"display layer 18");
     
     // end 3
     
@@ -168,9 +187,11 @@
             flyTo = MKMapRectUnion(flyTo, pointRect);
         }
     }
+    NSLog(@"display layer 19");
     
     // Position the map so that all overlays and annotations are visible on screen.
     map.visibleMapRect = flyTo;
+    NSLog(@"display layer 20");
 }
 
 - (void)loadLayer:(URLData *)data {
@@ -340,7 +361,7 @@
 	data.displayed = NO;//[NSNumber numberWithBool:YES];
 	data.imageName = @"ems.operations.emergencyMedical.hospital.png";
 	[self.urlData addObject:data];
-	[data release];
+	//[data release];
     
     
 	data = [URLData alloc];
@@ -349,7 +370,7 @@
 	data.displayed = NO;
 	data.imageName = @"ems.infrastructure.education.school.png";
 	[self.urlData addObject:data];
-	[data release];
+	//[data release];
 //    
 //		
 //	data = [URLData alloc];
@@ -366,7 +387,7 @@
 	data.displayed = NO;
 	data.imageName = @"ems.operations.lawEnforcement.policeStation.png";
 	[self.urlData addObject:data];
-	[data release];
+	//[data release];
     
     NSLog(@"url data count: %d", [self.urlData count]);
 
@@ -435,7 +456,7 @@
     viewController.layer3 = displayLayer3;
         
     if (viewController) [self presentModalViewController:viewController animated:YES];
-    [viewController release];
+   // [viewController release];
 }
 
 - (IBAction)closeWindow:(id)sender {

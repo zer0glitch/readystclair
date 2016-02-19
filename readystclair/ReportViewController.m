@@ -7,7 +7,6 @@
 //
 
 #import "ReportViewController.h"
-#import "ASIFormDataRequest.h"
 #import "AlertMonitor.h"
 #import "ThreatsDetailController.h"
 
@@ -196,12 +195,28 @@
 //    [networkQueue setDelegate:self];
     
     NSURL *url = [[NSURL alloc] initWithString:@"http://emapps.stclaircounty.org:8088/TiplineMobileServer/jaxrs/tip"];
-    ASIFormDataRequest *request = [[[ASIFormDataRequest alloc] initWithURL:url] autorelease];    
     int x = arc4random() % 1000;
     double time = [[NSDate date] timeIntervalSince1970];
     
     
     NSMutableString *tranId = [[NSMutableString alloc] initWithFormat:@"%d%f", x,time];
+    
+    NSString *post = [NSString stringWithFormat:@"description=%@,name=%@,phoneNumber=%@,tranId=%@,latitude=%@,longitude=%@,images=%@,base64=%@,coords=%@,%@", reportInfo.text,@"NA",@"555-555-5555", tranId, lat, lon,base64,lon,lat ];
+    NSData *postData = [post dataUsingEncoding:NSASCIIStringEncoding allowLossyConversion:YES];
+    
+    NSString *postLength = [NSString stringWithFormat:@"%d", [postData length]];
+    
+    NSMutableURLRequest *request = [[[NSMutableURLRequest alloc] init] autorelease];
+    [request setURL:[NSURL URLWithString:@"http://www.nowhere.com/sendFormHere.php"]];
+    [request setHTTPMethod:@"POST"];
+    [request setValue:postLength forHTTPHeaderField:@"Content-Length"];
+    [request setValue:@"application/x-www-form-urlencoded" forHTTPHeaderField:@"Content-Type"];
+    [request setHTTPBody:postData];
+    
+
+    /*
+    ASIFormDataRequest *request = [[[ASIFormDataRequest alloc] initWithURL:url] autorelease];
+   
     
     [request setPostValue:reportInfo.text forKey:@"description"];
     [request setPostValue:@"NA" forKey:@"name"];
@@ -211,9 +226,10 @@
     [request setPostValue:lon forKey:@"longitude"];
    // [request setPostValue:base64 forKey:@"images"];
     [request setPostValue:[NSString stringWithFormat:@"%@,%@",lon,lat] forKey:@"coords"];
+     */
     
     
-    
+    /*
     
     [request startSynchronous];
     NSError *error = [request error];
@@ -237,19 +253,23 @@
     
    // [request startSynchronous];
     [request startAsynchronous];
+      */
     
+    /*
     UIActivityIndicatorView *activity = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
     //[activity setFrame:CGRectMake(0, 0, 20, 20)];
     [activity setFrame:CGRectMake(indicatorView.bounds.size.width / 2.0f - activity.frame.size.width /2.0f, indicatorView.bounds.size.height / 2.0f - activity.frame.size.height /2.0f, activity.frame.size.width, activity.frame.size.height)];
+   
     
     //activity.center =CGPointMake(480/2.0, 320/2.0);
     [activity startAnimating];
     [indicatorView addSubview:activity];
     [activity release];
+     */
 
 }
 
-
+/*
 
 - (void)requestFinished:(ASIHTTPRequest *)request {
     // Use when fetching text data
@@ -273,6 +293,7 @@
 
 
 }
+ */
 
 -(IBAction)clearFields:(id)sender {
     imageView.image = nil;

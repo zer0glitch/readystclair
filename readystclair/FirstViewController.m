@@ -44,7 +44,7 @@
 
     
     monitor = [[AlertMonitor alloc] init];
-    tMonitor = [[TwitterMonitor alloc] init];
+    //tMonitor = [[TwitterMonitor alloc] init];
     [self checkAlerts];
     
     [self checkData];
@@ -182,10 +182,15 @@
     
     ThreatsDetailController *viewController =[[ThreatsDetailController alloc] initWithNibName:@"ThreatsDetailController" bundle:Nil];
     
-    viewController.threatData = tMonitor.twitterString;
+   // viewController.threatData = tMonitor.twitterString;
+    
+    viewController.file = @"twitter";
     
     if (viewController) [self presentModalViewController:viewController animated:YES];
     [viewController release];
+    
+    
+    
 }
 
 - (IBAction)homeButtonPressed:(id)sender {

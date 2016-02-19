@@ -16,6 +16,8 @@
 		<dict>
 			<key>CFBundleIconFiles</key>
 			<array>
+				<string>st_clair_logo_icon_retina</string>
+				<string>st_clair_logo_icon</string>
 				<string></string>
 				<string>st_clair_logo_icon.png</string>
 				<string>st_clair_logo_icon_retina.png</string>
@@ -35,11 +37,11 @@
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1.1</string>
+	<string>1.2</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleVersion</key>
-	<string>1.1</string>
+	<string>1.2</string>
 	<key>LSApplicationCategoryType</key>
 	<string></string>
 	<key>LSRequiresIPhoneOS</key>

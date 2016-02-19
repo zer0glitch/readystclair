@@ -8,8 +8,6 @@
 
 #import "TwitterMonitor.h"
 #import <Foundation/Foundation.h>
-#import "ASIHTTPRequest.h"
-#import "ASIFormDataRequest.h"
 #import "Alert.h"
 
 @implementation TwitterMonitor
@@ -44,23 +42,7 @@ NSString *lastPost;
 	//NSString *values = [NSString stringWithFormat:@" values %f", [location speed]];
 	
 	NSURL *url = [NSURL URLWithString:@"https://api.twitter.com/1/statuses/user_timeline.rss?screen_name=BeReadyStClair"];
-	ASIHTTPRequest *request = [ASIHTTPRequest requestWithURL:url];
-	//[request addPostValue:values forKey:@"data"];
-	
-	[request startSynchronous];
-	NSError *error = [request error];
-	
-	int responseCode = [request responseStatusCode];
-	if (responseCode <= 200 && responseCode >= 300) {
-		//NSString *response = [request responseString];
-		NSLog(@"Error trasmitting Data %@..", error);
-		//	statusLabel.text = [NSString stringWithFormat:@"Error Sending Information %s", error];
-	} else {
-		//statusLabel.text = [NSString stringWithFormat:@"Success Sending Information"];
-	}
-	
-	//NSLog(@"%@", [request responseString]);
-    
+
     
     NSXMLParser *xml = [[NSXMLParser alloc] initWithContentsOfURL:url];
     // JKMLParser *parser = [[JKMLParser alloc] init];
@@ -75,6 +57,7 @@ NSString *lastPost;
 }
 
 -(void) buildAlertString {
+    NSLog(@"XXXXX building alert string");
     
     [twitterString setString:@""];
     

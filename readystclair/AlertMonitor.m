@@ -8,8 +8,7 @@
 
 #import "AlertMonitor.h"
 
-#import "ASIHTTPRequest.h"
-#import "ASIFormDataRequest.h"
+
 #import "Alert.h"
 
 @implementation AlertMonitor
@@ -31,21 +30,7 @@ Alert *alert;
 	//NSString *values = [NSString stringWithFormat:@" values %f", [location speed]];
 	
 	NSURL *url = [NSURL URLWithString:@"http://alerts.weather.gov/cap/mi.php?x=0"];
-	ASIFormDataRequest *request = [ASIFormDataRequest requestWithURL:url];
-	//[request addPostValue:values forKey:@"data"];
-	
-	[request startSynchronous];
-	NSError *error = [request error];
-	
-	int responseCode = [request responseStatusCode];
-	if (responseCode <= 200 && responseCode >= 300) {
-		
-	} else {
-		//statusLabel.text = [NSString stringWithFormat:@"Success Sending Information"];
-	}
-	
-	//NSLog(@"%@", [request responseString]);
-    
+
     
     NSXMLParser *xml = [[NSXMLParser alloc] initWithContentsOfURL:url];
    // JKMLParser *parser = [[JKMLParser alloc] init];
